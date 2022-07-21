@@ -1,0 +1,39 @@
+.ui-widget-content {
+    width: 541px;
+    padding: 10px;
+    z-index: 9999 !important;
+}
+
+.ui-widget-content .ui-menu-item {
+    width: 100%;
+    float: left
+}
+
+.ui-widget-content .ui-corner-all {
+    width: 100%;
+    color: $preto;
+    padding: 5px 0;
+    float: left;
+    text-transform: capitalize
+}
+
+.ui-widget-content .ui-corner-all img {
+    margin-right: 10px
+}
+
+.ui-widget-content .ui-state-hover {
+    border: 0;
+    background: transparent;
+    color: $vermelho;
+}
+
+.ui-autocomplete {
+    width: auto;
+    @media only screen and (min-width: 1000px) {
+        width: 609px!important;
+    }
+    position: absolute;
+    font-family: $text-font;
+    background: #fff;
+    border: 0;
+}

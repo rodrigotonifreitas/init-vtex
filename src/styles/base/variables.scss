@@ -1,0 +1,84 @@
+// Exemplo
+
+$cinza-escuro: #2e2e2e;
+$cinza-medio: #4d4d4d;
+$cinza-claro: #cccccc;
+$cinza-border: #c5c5c5;
+$vermelho: #c00d0d;
+$vermelho-hover: #9b0000;
+$text-color: #494949;
+$preto: #000;
+$branco: #fff;
+$verde: #41c51e;
+
+$text-font: 'Barlow', sans-serif;
+$text-font2: 'Josefin Sans', sans-serif;
+$title-font: 'geometosregular', sans-serif;
+
+
+$cinza-bg-footer: #F1F2F2;
+$azul: #4965AF;
+$roxo: #C8D1E7;
+$lilas: #BA007C;
+$bege: #EDE1CD;
+$verde-saturado: #69C8B3;
+$laranja: orange;
+
+$primaryFont: 'Barlow', sans-serif;
+$secondFont: sans-serif;
+
+
+//institucional 
+$inst-font: $text-font;
+
+//cores do breacrumb institucional
+$first-breadcrumb-color: $cinza-claro;
+$last-breadcrumb-color: $laranja;
+
+//cor da borda esquerda no hover
+$cor-borda-esquerda-hover: $laranja;
+
+//cor da borda da opção do institucional que está selecionada
+$corda-borda-opcao-selecionada: $verde;
+
+//cor da borda esquerda da opção do institucional que está selecionada
+$corda-borda-esquerda-opcao-selecionada: $verde;
+
+//fonte para account, deve ser passado com !important
+$font: $text-font !important;
+
+//cor da borda do menu lateral
+$borda-colorida: $vermelho;
+
+//cor de fundo de botões de seleção
+$bc-primary: $vermelho;
+
+//botoões de clique das opções principais
+$bc-action-button: black;
+$color-action-button: white;
+$hover-bc-action-button: #ebebeb;
+$hover-color-action-button: white;
+
+//botões da parte de adicionar e alterar cartões
+$bc-card-button: black;
+$color-card-button: white;
+$hover-bc-card-button: $vermelho;
+$hover-color-card-button: white;
+
+//botão de cancelar saida do account
+$bc-cancel-exit-button: black;
+$color-cancel-exit-button: white;
+$hover-bc-cancel-exit-button: #ebebeb;
+$hover-color-cancel-exit-button: white;
+
+//botao de sair do account
+$bc-exit-button: black;
+$color-exit-button: white;
+$hover-bc-exit-button: #ebebeb;
+$hover-color-exit-button: white;
+
+//botoes da parte de adicionar informações do perfil de cliente
+$bc-profile-button: black; 
+$color-profile-button: white; 
+$hover-bc-profile-button: #ebebeb; 
+$hover-color-profile-button: white; 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+
+    <vtex.cmc:seoHead />
+    <vtex:metaTags />
+    <vtex:template id="amc-styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+</head>
+
+<body>
+
+    <!-- Chamada do cabeçalho da loja -->
+
+    <header>
+        <vtex:template id="amc-header" />
+        <vtex:template id="amc-headerMobile" />
+    </header>
+
+    <main>
+
+        <section>
+            <div id="content" class="row-fluid">
+                <div class="containerCenter">
+                    <div class="col-main">
+                        <vtex.cmc:orderList/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Chamada para o rodapé -->
+
+    <vtex:template id="amc-footer" />
+
+    <!-- Chamada para os scripts Js da loja -->
+
+    <vtex:template id="amc-scripts" />
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+.bread ul{
+    width: 100%;
+    float: left;
+    list-style-type: none;
+    padding: 20px 0;
+}
+
+.bread ul li{
+}
+
+.bread ul li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.bread ul li a::after{
+    content: '/';
+    font-size: 18px;
+    font-weight: 900;
+    font-family: 'fontAwesome';
+    text-indent: 0px;
+    float: right;
+    margin: 0 5px;
+    position: relative;
+    top: 2px;
+}
+
+.bread ul li.last a::after{
+    display: none;
+}
+
+.bread ul li:first-child a{
+    display: block;
+    font-weight: 700;
+    color: $vermelho;
+    text-indent: -99999px;
+
+    &::before{
+        content: 'Home';
+        text-indent: 0px;
+        float: left;
+    }
+}
+
+.bread ul li.last a{
+    font-weight: 400;
+}
+
+.bread ul li{
+    float: left;
+}

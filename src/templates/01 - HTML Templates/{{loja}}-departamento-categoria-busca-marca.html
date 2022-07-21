@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+
+    <vtex.cmc:seoHead />
+    <vtex:metaTags />
+    <vtex:template id="amc-styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+</head>
+
+<body>
+
+    <!-- Chamada do cabeçalho da loja -->
+
+    <header>
+        <vtex:template id="amc-header" />
+        <vtex:template id="amc-headerMobile" />
+    </header>
+
+    <main>
+
+        <!-- Estrutura Breadcrumb -->
+
+        <article class="containerFull bread">
+            <nav class="containerCenter">
+                <vtex.cmc:breadCrumb/>
+            </nav>
+        </article>
+
+        <!-- Conteudo central de Departamento -->
+
+        <article class="containerCenter departamento">
+
+            <!-- Imagem para o topo -->
+
+            <figure class="departamento-banner">
+                <vtex:contentPlaceHolder id="amc-BannerDepartamento" />
+            </figure>
+
+            <section class="departamento-title">
+                <vtex.cmc:searchTitle />
+            </section>
+
+            <section class="departamento-content">
+
+                <!-- Filtro de departamento -->
+                <aside class="departamento-filters">
+                    <nav class="departamento-filters__nav">
+                        <h4 class="departamento-filters__title"> Filtros </h4>
+                        <vtex.cmc:searchNavigator />
+                    </nav>
+                </aside>
+            
+                <!-- Produtos resultantes do Departamento -->
+
+                <section class="departamento-vitrine">
+                    <vtex.cmc:searchResult layout="4371a0ed-1eeb-4ad4-ac6e-d65344b64f6f" itemCount="40" columnCount="40" />
+                </section>
+
+            </section>
+
+        </article>
+
+        <!-- Descricao do Departamento para SEO -->
+
+        <article class="descricaoDetalhada">
+            <section class="containerCenter">
+                <h1><vtex:contentPlaceHolder id="amc-TituloDescricaoDetalhada" /></h1>
+                <vtex:contentPlaceHolder id="amc-DescricaoDetalhada" />
+            </section>
+        </article>
+
+    </main>
+
+    <!-- Chamada para o rodapé -->
+
+    <vtex:template id="amc-footer" />
+
+    <!-- Chamada para os scripts Js da loja -->
+
+    <vtex:template id="amc-scripts" />
+
+</body>
+
+</html>

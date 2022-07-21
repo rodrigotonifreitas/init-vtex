@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+
+    <vtex.cmc:seoHead />
+    <vtex:metaTags />
+    <vtex:template id="amc-styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- Trustvox -->
+        <script type="text/javascript" src="//colt.trustvox.com.br/colt.min.js"></script> 
+        <script>
+          var _trustvox_colt = _trustvox_colt || [];
+          _trustvox_colt.push(['_storeId', '111074 '], ['_limit', '7']);
+        </script>
+    <!-- /Trustvox -->
+</head>
+
+<body>
+
+    <!-- Chamada do cabeçalho da loja -->
+
+    <header>
+        <vtex:template id="amc-header" />
+        <vtex:template id="amc-headerMobile" />
+    </header>
+
+    <main>
+
+        <!-- Estrutura para slide principal -->
+
+        <figure class="containerFull slide-principal">
+            <vtex:contentPlaceHolder id="amc-slide-principal" />
+        </figure>
+
+        <figure class="containerFull slide-principalMobile">
+            <vtex:contentPlaceHolder id="amc-slide-principalMobile" />
+        </figure>
+
+        <article class="containerFull buscaAvancada">
+            <section class="containerCenter">
+                <p class="buscaAvancada-title">
+                    <span>Encontre</span> fácil
+                </p>
+
+                <form>
+
+                    <div class="buscaAvancada-select montadora">
+                        <label>
+                            1
+                        </label>
+                        <span class="buscaAvancada-select__title" data-value="">
+                            <p>Selecione a Montadora</p>
+                            <i class="buscaAvancada-select__titleIcon"> </i>
+                        </span>
+                        <ul class="buscaAvancada-list"></ul>
+                    </div>
+
+                    <div class="buscaAvancada-select modelo">
+                        <label>
+                            2
+                        </label>
+                        <span class="buscaAvancada-select__title disable" data-value="">
+                            <p>Selecione o Modelo</p>
+                            <i class="buscaAvancada-select__titleIcon"> </i>
+                        </span>
+                        <ul class="buscaAvancada-list"></ul>
+                    </div>
+
+                    <div class="buscaAvancada-select ano">
+                        <label>
+                            3
+                        </label>
+                        <span class="buscaAvancada-select__title disable" data-value="">
+                            <p>Selecione o Ano</p>
+                            <i class="buscaAvancada-select__titleIcon"> </i>
+                        </span>
+                        <ul class="buscaAvancada-list"></ul>
+                    </div>
+
+                    <button class="buscaAvancada-btnBuscar disable">
+                        <p class="buscaAvancada-btnBuscar__text"> Buscar peças </p>
+                        <i class="buscaAvancada-btnBuscar__icon"></i>
+                    </button>
+
+                </form>
+            </section>
+        </article>
+
+        <!-- Estrutura para slide prateleira -->
+
+        <article class="containerFull amcPrateleira">
+            <section class="containerCenter">
+                <div class="amcPrateleira-title">
+                    <h4>
+                        <vtex:contentPlaceHolder id="amc-prateleira01-title" />
+                    </h4>
+                    <span class="amcPrateleira-title__indice">
+                    </span>
+                    <i class="amcPrateleira-title__icon"> </i>
+                </div>
+                <div class="amcPrateleira-subTitle">
+                    <p class="amcPrateleira-subTitle__text">
+                        <vtex:contentPlaceHolder id="amc-prateleira01-subTitle" />
+                    </p>
+                </div>
+                <nav class="amcPrateleira-shelve__template">
+                    <vtex:contentPlaceHolder id="amc-prateleira01" />
+                </nav>
+            </section>
+        </article>
+
+        <!-- Estrutura para slide prateleira -->
+
+        <article class="containerFull amcPrateleira">
+            <section class="containerCenter">
+                <div class="amcPrateleira-title">
+                    <h4>
+                        <vtex:contentPlaceHolder id="amc-prateleira02-title" />
+                    </h4>
+                    <span class="amcPrateleira-title__indice">
+                    </span>
+                    <i class="amcPrateleira-title__icon"> </i>
+                </div>
+                <div class="amcPrateleira-subTitle">
+                    <p class="amcPrateleira-subTitle__text">
+                        <vtex:contentPlaceHolder id="amc-prateleira02-subTitle" />
+                    </p>
+                </div>
+                <nav class="amcPrateleira-shelve__template">
+                    <vtex:contentPlaceHolder id="amc-prateleira02" />
+                </nav>
+            </section>
+        </article>
+
+        <!-- Estrutura para banners -->
+
+        <article class="containerFull bannerCategoria">
+            <figure class="containerCenter">
+                <div class="bannerCategoria-left">
+                    <vtex:contentPlaceHolder id="amc-banner-lado-esquerdo" />
+                </div>
+
+                <div class="bannerCategoria-right">
+                    <vtex:contentPlaceHolder id="amc-banner-lado-direito" />
+                </div>
+            </figure>
+        </article>
+
+        <!-- Estrutura para banners -->
+
+        <article class="containerFull bannerCategoriaMobile">
+            <figure class="containerCenter">
+                <div class="bannerCategoriaMobile-left">
+                    <vtex:contentPlaceHolder id="amc-banner-mobile" />
+                </div>
+            </figure>
+        </article>
+
+        <!-- Estrutura para prateleira de coleções  -->
+
+        <article class="containerFull clusterShelf left">
+            <section class="containerCenter">
+                <div class="clusterShelf-banner">
+                    <vtex:contentPlaceHolder id="amc-banner-prateleira-colecao-01" />
+                </div>
+
+                <div class="clusterShelf-clusters">
+                    <ul class="clusterShelf-clusters__list"> 
+                        <li class="clusterShelf-clusters__listItem active" data-position="1"> -- </li>
+                        <li class="clusterShelf-clusters__listItem" data-position="2"> -- </li>
+                        <li class="clusterShelf-clusters__listItem" data-position="3"> -- </li>
+                        <li class="clusterShelf-clusters__listItem" data-position="4"> -- </li>
+                    </ul>
+
+                    <div class="clusterShelf-clusters__listShelf"> 
+                        <vtex:contentPlaceHolder id="amc-prateleira-colecao-01-01" />
+                        <vtex:contentPlaceHolder id="amc-prateleira-colecao-01-02" />
+                        <vtex:contentPlaceHolder id="amc-prateleira-colecao-01-03" />
+                        <vtex:contentPlaceHolder id="amc-prateleira-colecao-01-04" />
+                    </div>
+
+                </div>
+            </section>
+        </article>
+
+        <article class="containerFull clusterShelf right">
+            <section class="containerCenter">
+                
+                <div class="clusterShelf-clusters">
+                    <ul class="clusterShelf-clusters__list"> 
+                        <li class="clusterShelf-clusters__listItem active" data-position="1"> -- </li>
+                        <li class="clusterShelf-clusters__listItem" data-position="2"> --  </li>
+                        <li class="clusterShelf-clusters__listItem" data-position="3"> -- </li>
+                        <li class="clusterShelf-clusters__listItem" data-position="4"> -- </li>
+                    </ul>
+
+                    <div class="clusterShelf-clusters__listShelf"> 
+                        <vtex:contentPlaceHolder id="amc-prateleira-colecao-02-01" />
+                        <vtex:contentPlaceHolder id="amc-prateleira-colecao-02-02" />
+                        <vtex:contentPlaceHolder id="amc-prateleira-colecao-02-03" />
+                        <vtex:contentPlaceHolder id="amc-prateleira-colecao-02-04" />
+                    </div>
+
+                </div>
+
+                <div class="clusterShelf-banner">
+                    <vtex:contentPlaceHolder id="amc-banner-prateleira-colecao-02" />
+                </div>
+            </section>
+        </article>
+
+        <!-- Estrutura para carrossel de marcas -->
+        <article class="containerFull marcas">
+            <section class="containerCenter">
+            
+                <div class="marcas__title">
+                    <h4 class="marcas__title--text">
+                        Marcas que <br/>adoramos
+                    </h4>
+                </div>
+                <nav class="marcas__carousel">
+                    <div class="marcas__carousel-slide">
+                        <vtex:contentPlaceHolder id="logo-marcas" />
+                    </div>
+                </nav>
+            </section>
+        </article>
+
+        <!-- Estrutura para carrossel de marcas -->
+        <article class="containerFull instafeed">
+            <section class="containerCenter">
+                <div class="instafeed__post" id="instafeed">
+                    <a href="https://www.instagram.com/adoromeucarro/" target="_blank" class="instafeed__post--title">
+                        <h3> siga nosso insta! </h3>
+                    </a>
+                    <a href="https://www.instagram.com/adoromeucarro/" target="_blank" class="instafeed__post--profile">
+                        @adoromeucarro
+                    </a>
+                </div>
+            </section>
+        </article>
+
+         <!--INICIO trustvox-->
+        <article class="containerFull trustvox">
+            <section class="containerCenter">
+                <h3 class="trustVox__title">
+                    Adoramos clientes satisfeitos
+                </h3>
+                <div id="_trustvox_colt"></div>
+            </section>
+        </article>
+        <!--FIM trustvox-->
+
+        <!--Estrtura texto SEO home-->
+        <article class="containerFull textSEO">
+            <section class="containerCenter">
+                <div class="textSEO__logo"> <vtex.cmc:logoBranco /> </div>
+                <h2 class="textSEO__title"> Sobre nós </h2>
+                <div class="textSEO__text"> 
+                    <p>Sabemos que o carro é o sonho de consumo de muita gente, é um desafio para muitos brasileiros na hora de comprar o primeiro veículo e mesmo quando conseguem nem sempre é um modelo zero. Sabemos disso, por que também nos esforçamos muito para ter o nosso primeiro carro. Aqui na empresa, quando pensamos em um carro, não pensamos nele somente como um objeto de desejo ou um meio de transporte necessário, pensamos em momentos que ele nos proporciona, principalmente com nossos amigos e com a nossa família. </p>
+
+                    <p>Já parou para pensar quantos bons momentos você passou com o seu carro ou com a ajuda dele? Até mesmo os momentos mais difíceis.... Quem nunca ficou parado na estrada, por que o possante arriou? Na hora, dá um certo desconforto, mas tudo isso vira histórias que vamos contar, afinal uma viagem sem imprevistos não tem graça. O que realmente importa são as experiências que nos trazem aprendizado e nos fazem melhores. E por esses motivos, criamos o ADORO MEU CARRO, para fornecer produtos que melhorem o seu automóvel, para deixá-lo do jeito que sempre sonhou, seja ele novo ou usado.</p>
+
+                    <p>E para isso, disponibilizamos uma variedade de produtos de alta qualidade para veículos nacionais e importados, sempre prezando pela clareza na informação, excelência no atendimento e velocidade na entrega, usando o que há de melhor em tecnologia para você receber seu produto em sua casa o mais rápido possível.
+                    <br/>Nosso principal compromisso com você é fazer com que encontre os produtos que procura, de forma simples, rápida e que tenha uma ótima experiência de compra com agente. Sabemos que para se conquistar algo, precisamos de muita disciplina e empenho. Nos dedicamos todos os dias para que nosso produto chegue até você com muita qualidade.</p>
+
+                    <p>Esperamos que sinta isso aí do outro lado, conte com a gente. Adoramos o que fazemos, adoramos carros e principalmente, adoramos clientes satisfeitos.</p>
+                </div>
+                 <a class="textSEO__btn" href="/institucional/nossa-empresa">
+                    Saiba mais
+                </a>
+            </section>
+        </article>
+
+    </main>
+
+    <!-- Chamada para o rodapé -->
+
+    <vtex:template id="amc-footer" />
+
+    <!-- Chamada para os scripts Js da loja -->
+
+    <vtex:template id="amc-scripts" />
+
+</body>
+
+</html>

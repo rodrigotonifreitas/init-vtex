@@ -1,0 +1,535 @@
+.menuDesktop {
+  @media only screen and (min-width: 1000px) {
+    display: block;
+  }
+  display: none;
+  background: $cinza-medio;
+
+  .containerCenter {
+    height: 64px;
+    position: relative;
+  }
+
+  &-list {
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item {
+      width: 100%;
+      height: 64px;
+      transition: background linear 0.3s;
+
+      &:hover {
+        background: $vermelho;
+        transition: background linear 0.3s;
+
+        .menuDesktop-sub {
+          display: block;
+        }
+      }
+
+      &:last-child {
+        a {
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      > a {
+        height: 64px;
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        padding: 8px;
+        box-sizing: border-box;
+
+        &::after {
+          content: "";
+          width: 1px;
+          height: 55px;
+          position: absolute;
+          display: inline-block;
+          background: #5d5d5d;
+          top: 4.5px;
+          right: 0;
+        }
+      }
+
+      &.departamentos {
+        background: $cinza-escuro;
+
+        &.load{
+          .menuDesktop-list__itemIcon{
+            &::before{
+              content: '';
+              width: 18px;
+              height: 20px;
+              background: url(/arquivos/loading.gif) 50% no-repeat;
+              background-size: 100%;
+            }
+          }
+          background: transparent;
+        }
+
+        &:hover {
+          background: $vermelho;
+
+          .menuDesktop-list__sub {
+            display: flex;
+          }
+
+          > .box-banner {
+            @media only screen and (min-width: 1280px) {
+              display: block;
+            }
+            position: absolute;
+            right: 16px;
+            top: 64px;
+            z-index: 999;
+          }
+
+          &::before {
+            content: "";
+            width: calc(100% - 32px);
+            height: 488px;
+            position: absolute;
+            left: 16px;
+            top: 64px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 16px 24px;
+            z-index: 999;
+          }
+        }
+
+        > .box-banner {
+          display: none;
+        }
+
+        a {
+          &::after {
+            display: none;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        &Text {
+          font-weight: 600;
+        }
+
+        .menuDesktop-list__sub {
+          width: auto;
+          height: 488px;
+          position: absolute;
+          left: 16px;
+          display: None;
+          flex-direction: column;
+          justify-content: flex-start;
+          background: rgba(255, 255, 255, 0.9);
+          padding: 16px 0px 0px 0px;
+          box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+          z-index: 999;
+
+          &Item {
+            &:hover > a {
+              background: $cinza-claro;
+              transition: all linear 0.5s;
+              text-decoration: none;
+
+              &:before {
+                content: "";
+                width: 7px;
+                height: 100%;
+                background: $vermelho;
+                position: absolute;
+                top: 0;
+                left: 0;
+              }
+
+              > p {
+                position: relative;
+                transition: all linear 0.5s;
+
+                &:after {
+                  content: "";
+                  width: 100%;
+                  height: 2px;
+                  position: absolute;
+                  background: $vermelho;
+                  bottom: -2px;
+                  left: 0;
+                }
+              }
+
+              > i {
+                &::after{
+                  color: $vermelho;
+                  transition: all linear 0.5s;
+                }
+              }
+            }
+
+            > a {
+              width: calc(100%);
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              position: relative;
+              font-size: 13px;
+              text-transform: uppercase;
+              padding: 5px 16px 5px 26px;
+              transition: all linear 0.5s;
+            }
+
+            &Text {
+              display: inline-block;
+              margin-right: 16px;
+              transition: all linear 0.5s;
+              font-weight: 600;
+            }
+
+            &Icon {
+              width: 15px;
+              height: 15px;
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              transition: all linear 0.5s;
+
+              &::after{
+                content: '\f0da';
+                display: block;
+                font-family: 'FontAwesome';
+                font-style: normal;
+                font-size: 18px;
+                color: $cinza-medio;
+                transition: all linear 0.5s;
+              }
+            }
+
+            //Segundo nivel
+            .wrapper{
+              width: 690px;
+              max-height: 484px;
+              display: none;
+              position: absolute;
+              top: 0;
+              left: 100%;
+              overflow: auto;
+
+              &::-webkit-scrollbar {
+                width: 5px;
+              }
+
+              &::-webkit-scrollbar-track {
+                background: $cinza-border;
+              }
+
+              &::-webkit-scrollbar-thumb {
+                background: $cinza-medio;
+              }
+
+              &::-webkit-scrollbar-thumb:hover {
+                background: $cinza-escuro;
+              }
+            }
+
+            &:hover .wrapper{
+              display: block;
+            }
+
+            &#cat29,
+            &#cat22,
+            &#cat23,
+            &#cat19,
+            &#cat3{
+              .menuDesktop-list__subItem__sub {
+                column-count: 3;
+              }
+            }
+
+            &__sub {
+              width: 100%;
+              padding: 16px;
+
+              &Item {
+                float: left;
+                padding: 0 8px 8px;
+                text-transform: uppercase;
+
+                a {
+                  width: 100%;
+
+                  &:hover p b {
+                    color: $vermelho;
+                    transition: all linear 0.5s;
+                  }
+
+                  p {
+                    width: 100%;
+
+                    b {
+                      font-size: 13px;
+                      transition: all linear 0.5s;
+                    }
+                  }
+                }
+
+                &__sub {
+                  width: 100%;
+                  display: block;
+
+                  &Item {
+                    width: 100%;
+                    display: block;
+                    // padding: 8px;
+
+                    a {
+                      width: 100%;
+
+                      p {
+                        width: 100%;
+                        font-size: 13px;
+                        padding: 3px 8px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &Icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:before{
+          width: 100%;
+          font-family: 'icomoon';
+          font-style: normal;
+          text-align: center;
+          color: $branco;
+        }
+      }
+
+      &Text {
+        width: 100%;
+        color: $branco;
+        display: block;
+        font-family: $text-font2;
+        font-size: 14px;
+        text-align: center;
+      }
+
+
+      &#cat22,
+      &#cat23,
+      &#cat19,
+      &#cat30{
+        .menuDesktop-sub{
+          column-count: 3!important;
+
+          .menuDesktop-sub__item{
+            width: 100%;
+            float: none;
+          }
+        }
+      }
+    }
+  }
+  
+  &-sub {
+    width: calc(100% - 32px);
+    min-height: 364px;
+    position: absolute;
+    left: 16px;
+    display: none;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 16px 24px;
+    z-index: 999;
+    padding-right: 350px;
+    
+    &__item {
+      width: calc(100% / 3);
+      margin-right: 0;
+      float: left;
+      padding: 8px 0;
+
+      > a {
+        text-align: left;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all linear .3s;
+
+        &:hover p{
+          transition: all linear .3s;
+          color: $vermelho;
+          text-decoration: none;
+        }
+      }
+
+      &Text {
+        width: 100%;
+        display: block;
+        font-size: 13px;
+        text-align: left;
+        color: $text-color;
+        padding-bottom: 5px;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+
+      .menuDesktop-sub-sub{
+        .menuDesktop-sub__itemText{
+          width: 100%;
+          text-transform: uppercase;
+          font-size: 13px;
+          padding: 4px 0;
+        }
+      }
+    }
+
+    .box-banner {
+      position: absolute;
+      right: 0;
+      top: 0.5px;
+    }
+  }
+}
+
+//Icones
+
+.menuDesktop{
+  &-list{
+    &__item{
+
+      &.departamentos{
+        .menuDesktop-list__itemIcon{
+          &::before{
+            content: '\e921';
+          }
+        }
+      }
+
+      //Iliminação
+      &#cat3{
+        .menuDesktop-list__itemIcon{
+          &::before{
+            content: '\e905';
+            font-size: 20px;
+          }
+        }
+      }
+
+      //Retrovisores
+      &#cat9{
+        .menuDesktop-list__itemIcon{
+          &::before{
+            content: '\e90d';
+            font-size: 20px;
+          }
+        }
+      }
+
+      //Calotas
+      &#cat21{
+        .menuDesktop-list__itemIcon{
+          &::before{
+            content: '\e906';
+            font-size: 22px;
+          }
+        }
+      }
+
+      //Som
+      &#cat22{
+        .menuDesktop-list__itemIcon{
+          &::before{
+            content: '\e90e';
+            font-size: 22px;
+          }
+        }
+      }
+
+      //Grades
+      &#cat23{
+        .menuDesktop-list__itemIcon{
+          &::before{
+            content: '\e918';
+          }
+        }
+      }
+
+      //Limpeza
+      &#cat26{
+        .menuDesktop-list__itemIcon{
+          &::before{
+            content: '\e901';
+            font-size: 22px;
+          }
+        }
+      }
+
+      //Palhetas
+      &#cat27{
+        .menuDesktop-list__itemIcon{
+          &::before{
+            content: '\e919';
+          }
+        }
+      }
+
+      //Acessórios
+      &#cat30{
+        .menuDesktop-list__itemIcon{
+          &::before{
+            content: '\e910';
+            font-size: 22px;
+          }
+        }
+      }
+
+      //Ferramentas
+      &#cat19{
+        .menuDesktop-list__itemIcon{
+          &::before{
+            content: '\e91a';
+          }
+        }
+      }
+
+      //Segurança
+      &#cat32{
+        .menuDesktop-list__itemIcon{
+          &::before{
+            content: '\e90c';
+            font-size: 22px;
+          }
+        }
+      }
+
+      //Outlet 
+      &#outlet{
+        .menuDesktop-list__itemIcon{
+          &::before{
+            content: '\e91c';
+            font-size: 22px;
+          }
+        }
+      }
+    } 
+  }
+}

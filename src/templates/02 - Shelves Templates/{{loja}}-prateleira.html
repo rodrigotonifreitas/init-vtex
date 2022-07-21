@@ -1,0 +1,77 @@
+#set($id = $product.Id)
+    #set($idSku = $product.productVariantId)
+    #set($uri = $product.Uri)
+    #set($escapedName = $product.HtmlEscapedName)
+    #set($seloPretoEsquerdo = $product.ProductField(24))
+    #set($seloVermelhoDireito = $product.ProductField(25))
+    #set($seloDestaqueTopo = $product.ProductField(26))
+    #set($seloTrocaFacil = $product.ProductField(27))
+    #set($desconto = $product.ListPriceMinusBestPriceInPercent)
+
+    <a class="prateleira__productImage" title="$escapedName" href="$uri">
+        <div class="prateleira__productFlagsTopLeft">
+            #if ($desconto > 0)
+                <span class="flag__desconto">$desconto</span>
+            #end
+            <span class="flag__seloDestaqueTopo">$seloDestaqueTopo</span>
+        </div>
+
+        <div class="prateleira__productFlagsBottomLeft">
+            <span class="flag__seloPretoEsquerdo">$seloPretoEsquerdo</span>
+        </div>
+
+        <div class="prateleira__productFlagsBottomRight">
+            <span class="flag__seloVermelhoDireito">$seloVermelhoDireito</span>
+        </div>
+        
+        <!-- <span class="js--lazyload has--lazyload" data-noscript=""> -->
+        <span>
+            <!-- <noscript>$product.GetImageTag(2)</noscript> -->
+            $product.GetImageTag(2)
+        </span>
+        <span class="js--lazyload has--lazyload hover" data-noscript="">
+            <noscript>$product.GetImageTag(2, '2')</noscript>
+        </span>
+    </a>
+
+    <div class="prateleira__data" data-id="$id">
+        <h3 class="prateleira__lead">
+            <a class="prateleira__link" title="$escapedName" href="$uri">
+                $product.Name
+            </a>
+        </h3>        
+        
+        #if ($product.IsInStock)
+            <p class="prateleira__price">
+                <a class="prateleira__price-link" title="$escapedName" href="$uri">
+                    #if ($product.HasBestPrice)
+                        <span class="prateleira__price-oldPrice">
+                            De: <b>$product.ListPrice</b>
+                        </span>
+                        <span class="prateleira__price-bestPrice">
+                            <b>Por:</b> <b class="price">$product.BestPrice</b>
+                        </span>
+                    #else
+                        <span class="prateleira__price-oldPrice">
+                        </span>
+                        <span class="prateleira__price-bestPrice">
+                            <b>Por:</b> <b class="price">$product.BestPrice</b>
+                        </span>                    
+                    #end
+                    
+                    <em class="prateleira__price-installment">
+                        Parcele até <b>$product.NumbersOfInstallment x</b> de <b>$product.InstallmentValue</b>
+                    </em>
+                </a>
+                
+                <span class="prateleira__btnComprar" data-id="$idSku">
+                    <i class="prateleira__btnComprar-Icon"> </i>
+                    Comprar 
+                </span>
+            </p>
+            
+        #else
+            <p class="prateleira__outOfStock">Produto Esgotado</p> 
+        #end
+        
+    </div>

@@ -1,0 +1,103 @@
+.instafeed{
+    &__post{
+        width: auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--title{
+            h3{
+                max-width: 100%;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: $title-font;
+                font-size: 25px;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: $vermelho;
+                top: 35px;
+                left: calc(50% + 16px);
+            
+                &::before{
+                    content: '\f16d';
+                    display: inline-block;
+                    font-family: 'FontAwesome';
+                    font-size: 32px;
+                    margin-right: 6px;
+                }
+            }
+
+        }
+
+        a{
+            width: calc(100% / 6);
+            max-width: 191px;
+            display: inline-block;
+
+            &:nth-of-type(4){
+                margin-left: -3px;
+            }
+
+            img{
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+
+        &--profile{
+            width: auto;
+            position: absolute;
+            display: block;
+            font-family: $title-font;
+            font-size: 25px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $vermelho;
+            bottom: 35px;
+            left: calc(50% + 16px);
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .instafeed{
+        height: auto;
+
+        &__post{
+            flex-wrap: wrap;
+            
+            &--title{
+                width: 100%!important;
+                max-width: 100%!important;
+                position: static;
+                text-align: center;
+                margin: 20px 0;
+
+                h3{
+                    width: 100%;
+                    position: static;
+                    text-align: center;
+                }
+            }
+
+            a{
+                width: calc(50% - 16px);
+            }
+
+            &--profile{
+                width: 100%!important;
+                max-width: 100%!important;
+                position: static;
+                text-align: right;
+                order: 5;
+                box-sizing: border-box;
+                padding-right: 16px;
+                margin: 22px 0;
+            }
+        }   
+    }
+}

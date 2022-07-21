@@ -1,0 +1,193 @@
+.drawerMiniCart{
+    width: 345px;
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    display: none;
+    z-index: 9;
+
+    &-header{
+        width: 100%;
+        height: 45px;
+        display: block;
+        background: $vermelho;
+    }
+
+    &-center{
+        max-height: 376px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        background: $branco;
+        padding: 9px;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+            
+        &::-webkit-scrollbar-track {
+            background: $cinza-border; 
+        }
+            
+        &::-webkit-scrollbar-thumb {
+            background: $cinza-medio; 
+        }
+            
+        &::-webkit-scrollbar-thumb:hover {
+            background: $cinza-escuro; 
+        }
+
+        &__empty{
+            width: 100%;
+            font-weight: 600;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        &__card{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 25px 0;
+
+            a{
+                display: flex;
+            }
+
+            &.removing{
+                transition: all linear .2s;
+                opacity: .6;
+            }
+
+            img{
+                box-shadow: 0 0 2px $cinza-claro;
+                margin: 0 8px;
+                padding: 6px;
+            }
+
+            .infoCard{
+                min-height: 67px;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: space-between;
+             
+                &-name{
+                    width: 100%;
+                    max-width: 200px;
+                    font-size: 11px;
+                    font-weight: 400;
+                }
+
+                &-price{
+                    width: 100%;
+                    font-weight: 700;
+                    font-size: 15px;
+                    color: $vermelho;
+
+                    b{
+                        font-weight: 700;
+                        font-size: 15px;
+                        color: $cinza-escuro;
+                    }
+                }
+
+            }
+
+            .trash{
+                width: 13px;
+                height: 13px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 30px;
+
+                &::after{
+                    content: '\f1f8';
+                    font-family: 'FontAwesome';
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &-footer{
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: $preto;
+        padding: 23px 43px;
+
+        &__summary{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            .left{
+                width: 60%;
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 300;
+                color: $branco;
+                margin-bottom: 5px
+            }
+
+            .right-qtd{
+                width: 40%;
+                display: inline-block;
+                text-align: right;
+                font-size: 14px;
+                font-weight: 300;
+                color: $branco;
+                margin-bottom: 5px
+            }
+
+            .right-total{
+                width: 40%;
+                display: inline-block;
+                font-size: 20px;
+                font-weight: 400;
+                text-align: right;
+                color: $branco;
+                margin-bottom: 5px
+            }
+        }
+
+        &__buyButton{
+            width: 100%;
+            max-width: 230px;
+            border: 0;
+            margin: 20px 0;
+
+            a{
+                width: 100%;
+                height: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 18px;
+                font-weight: 900;
+                text-transform: uppercase;
+                text-align: center;
+                color: $branco;
+                background: $verde;
+            }
+        }
+
+        &__back{
+            font-size: 14px;
+            color: $branco;
+            text-decoration: underline;
+            display: none;
+
+            &:hover{
+                color: $branco;
+            }
+        }
+    }
+}

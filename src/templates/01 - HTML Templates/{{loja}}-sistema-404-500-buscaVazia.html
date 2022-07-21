@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+
+    <vtex.cmc:seoHead />
+    <vtex:metaTags />
+    <vtex:template id="amc-styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+</head>
+
+<body>
+
+    <!-- Chamada do cabeçalho da loja -->
+
+    <header>
+        <vtex:template id="amc-header" />
+        <vtex:template id="amc-headerMobile" />
+    </header>
+
+    <main>
+
+        <article class="containerFull pageErro">
+            <section class="containerCenter">
+                <div class="pageErro__left">
+                    <h3 class="pageErro__title">
+                        <vtex:contentPlaceHolder id="amc-titleErro" />
+                    </h3>    
+                    <div class="pageErro__dicas">
+                        <p class="pageErro__subTitle">
+                            Tente novamente seguindo nossas dicas:
+                        </p>
+                        
+                        <p><span> &#187; </span>Realize usando outra palavra-chave.</p>
+
+                        <p><span> &#187; </span>Deixe sua busca menos específica.</p>
+                            
+                        <p><span> &#187; </span>Verifique a ortografia da palavra-chave.</p>
+                            
+                        <p><span> &#187; </span>Caso ainda não encontre no site o que procura, ou tenha alguma dúvida.
+                        entre em contato pelo número: <b>(11) 4118-2671</b> ou mande um e-mail
+                        para : <b>sac@adoromeucarro.com.br</b></p>
+                    </div>
+                    <a class="pageErro__button" href="/">
+                        Voltar para home
+                    </a>
+                </div>
+
+                <div class="pageErro__right">
+                    <figure class="pageErro__banner">
+                        <vtex:contentPlaceHolder id="amc-bannerErro" />
+                    </figure>
+                </div>
+            </section>
+        </article>
+
+        <!-- Estrutura para slide prateleira -->
+
+        <article class="containerFull amcPrateleira">
+            <section class="containerCenter">
+                <div class="amcPrateleira-title">
+                    <h4>
+                        <vtex:contentPlaceHolder id="amc-buscaVazia-title" />
+                    </h4>
+                    <span class="amcPrateleira-title__indice">
+                    </span>
+                    <i class="amcPrateleira-title__icon"> </i>
+                </div>
+                <div class="amcPrateleira-subTitle">
+                    <p class="amcPrateleira-subTitle__text">
+                        <vtex:contentPlaceHolder id="amc-buscaVazia-subTitle" />
+                    </p>
+                </div>
+                <nav class="amcPrateleira-shelve__template">
+                    <vtex:contentPlaceHolder id="amc-buscaVaziaPrateleira" />
+                </nav>
+            </section>
+        </article>
+
+    </main>
+
+    <!-- Chamada para o rodapé -->
+
+    <vtex:template id="amc-footer" />
+
+    <!-- Chamada para os scripts Js da loja -->
+
+    <vtex:template id="amc-scripts" />
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<article class="containerFull Topbar">
+    <section class="containerCenter">
+        <vtex.cmc:informativo />
+    </section>
+</article>
+
+<article class="containerFull header">
+    <section class="containerCenter">
+        <nav class="header-logo">
+            <a href="/">
+                <vtex.cmc:{{loja}}Logo />
+            </a>
+        </nav>
+
+        <section class="header-departamentos">
+            <p class="header-departamentos__text"> Departamentos </p>
+        </section>
+
+        <section class="header-busca">
+            <vtex.cmc:fullTextSearchBox />
+        </section>
+
+        <div class="headerLeft">
+
+            <section class="header-nossasLojas">
+                <a href="/institucional/nossa-empresa">
+                    <span class="header-nossasLojas__icon">
+                    </span>
+                    <p class="header-nossasLojas__text">
+                        Conheça nossa empresa
+                    </p>
+                </a>
+            </section>
+
+            <section class="header-saudacao">
+                <span class="header-saudacao__text"></span>
+                <span class="header-saudacao__icon"></span>
+                <span class="header-saudacao__drawer">
+                    <a href="/account"> meus dados </a>
+                    <a href="/account/orders"> meus pedidos </a>
+                    <a href="/logout"> sair </a>
+                </span>
+
+            </section>
+
+            <section class="header-carrinho">
+
+                <div class="maskCart">
+                </div>
+                <div class="drawerMiniCart">
+                    <span class="drawerMiniCart-header">
+                    </span>
+                    <span class="drawerMiniCart-center">
+                        <p class="drawerMiniCart-center__empty">
+                            Carrgando seu carrinho =)
+                        </p>
+                    </span>
+                    <span class="drawerMiniCart-footer">
+                        <ul class="drawerMiniCart-footer__summary">
+                            <li class="left">
+                                Quantidade de Produtos:
+                            </li>
+                            <li class="right-qtd">
+                                --
+                            </li>
+
+                            <li class="left">
+                                Valor total
+                            </li>
+                            <li class="right-total">
+                                --
+                            </li>
+                        </ul>   
+
+                        <button class="drawerMiniCart-footer__buyButton">
+                            <a href="/checkout/#/cart">
+                                Comprar 
+                            </a>
+                        </button>
+                        <a class="drawerMiniCart-footer__back"> 
+                            Continuar comprando
+                        </a>
+                    </span>
+                </div>
+
+                <p class="header-carrinho__text">
+                    Meu <br/>carrinho
+                </p>  
+
+                <div class="header-carrinho__icon">                
+                    <span class="header-carrinho__iconCart"></span>
+                    <span class="header-carrinho__iconQtd"></span>
+                </div>
+            </section>
+
+        </div>
+
+    </section>
+</article>
+
+<!-- Estrutura menu -->
+
+<nav class="containerFull menuDesktop">
+    <div class="containerCenter">
+        <ul class="menuDesktop-list">
+            <li class="menuDesktop-list__item departamentos load">
+                <a>
+                    <span class="menuDesktop-list__itemIcon"></span>
+                    <p class="menuDesktop-list__itemText"> Carregando... </p>
+                </a>
+
+                <ul class="menuDesktop-list__sub">
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<div class="imagesSubMenu" style="display: none;">
+    <span class="imagesSubMenu-um">
+        <vtex:MenuImagemUm />
+    </span>
+    <span class="imagesSubMenu-dois">
+        <vtex:MenuImagemDois />
+    </span>
+    <span class="imagesSubMenu-tres">
+        <vtex:MenuImagemTres />
+    </span>
+    <span class="imagesSubMenu-quatro">
+        <vtex:MenuImagemQuatro />
+    </span>
+    <span class="imagesSubMenu-cinco">
+        <vtex:MenuImagemCinco />
+    </span>
+    <span class="imagesSubMenu-seis">
+        <vtex:MenuImagemSeis />
+    </span>
+    <span class="imagesSubMenu-sete">
+        <vtex:MenuImagemSete />
+    </span>
+    <span class="imagesSubMenu-oito">
+        <vtex:MenuImagemOito />
+    </span>
+    <span class="imagesSubMenu-nove">
+        <vtex:MenuImagemNove />
+    </span>
+    <span class="imagesSubMenu-dez">
+        <vtex:MenuImagemDez />
+    </span>
+    <span class="MenuImagemDestaque">
+        <vtex:MenuImagemDestaque />
+    </span>
+</div>

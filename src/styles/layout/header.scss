@@ -1,0 +1,470 @@
+.header {
+  display: none;
+  @media only screen and (min-width: 1000px) {
+    display: block;
+  }
+  background: $branco;
+  transition: all linear .3s;
+
+  .containerCenter {
+    height: 113px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-logo {
+    width: 185px;
+    height: auto;
+    display: inline-block;
+  }
+
+  &-departamentos{
+    display: none;
+  }
+
+  &-busca {
+    width: calc(100% - 645px);
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 22px;
+
+    .busca {
+      width: 100%;
+      position: relative;
+      border: 0;
+
+      &::after {
+        content: "\e90b";
+        width: 50px;
+        height: 51px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'icomoon';
+        font-size: 22px;
+        color: $branco;
+        background: $vermelho;
+        border-radius: 50%;
+        right: 0;
+        top: 1px;
+      }
+
+      &.active{
+        &::after {
+          background: #dd0101;
+        }
+      }
+
+      legend,
+      label,
+      select {
+        display: none;
+      }
+
+      .fulltext-search-box {
+        width: calc(100% - 25px);
+        height: 50px;
+        background: #eee;
+        font-size: 13px;
+        font-family: $text-font2;
+        color: $text-color;
+        border-radius: 30px 0 0 30px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        padding: 0 32px;
+
+        &:focus {
+          border: 2px solid #dd0101;
+        }
+      }
+
+      .btn-buscar {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: transparent;
+        border-radius: 50%;
+        border: 0;
+        text-indent: -9999px;
+        margin-left: -26px;
+        top: 1.5px;
+        cursor: pointer;
+        z-index: 9;
+      }
+    }
+  }
+
+  .headerLeft {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-nossasLojas {
+    a {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    &__icon {
+      width: 32px;
+      height: 32px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 5px;
+
+      &::after{
+        content: '\e915';
+        display: block;
+        font-family: 'icomoon';
+        font-size: 25px;
+        color: $vermelho;
+      }
+    }
+
+    &__text {
+      width: 95px;
+      display: inline-block;
+      font-size: 14px;
+      font-family: $text-font2;
+      font-weight: 400;
+    }
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 25px;
+      background: $vermelho;
+      display: inline-block;
+      margin: 0 16px;
+    }
+  }
+
+  &-saudacao {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+
+    &:hover{
+      .header-saudacao__icon {
+        background: $vermelho;
+        
+        &::after{
+          color: $branco;
+        }
+      }
+
+      .header-saudacao__text {
+        height: 38px;
+        background: $vermelho;
+        color: $branco;
+        
+        a{
+          color: $branco;
+
+          u{
+            color: $branco;
+          }
+
+          .mail{
+            color: $branco;
+          }
+        }
+      }
+    }
+
+    &__text {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 4px;
+
+      a {
+        max-width: 80px;
+        display: inline-block;
+        font-size: 14px;
+        font-family: $text-font2;
+        font-weight: 400;
+        margin-right: 11px;
+
+        u {
+          font-size: 14px;
+          font-family: $text-font2;
+          font-weight: 400;
+        }
+
+        .mail {
+          width: 80px;
+          display: block;
+          font-family: $text-font2;
+          font-weight: 400;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+
+    &__icon {
+      width: 32px;
+      height: 38px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      padding: 4px;
+
+      &::after{
+        content: '\e913';
+        display: block;
+        font-family: 'icomoon';
+        font-size: 25px;
+        color: $vermelho;
+      }
+    }
+
+    &:hover{
+      .active {
+        display: block;
+      }
+
+      .header-saudacao__drawer{
+        display: block;
+      }
+    }
+
+    &__drawer {
+      width: calc(100% - 33px);
+      position: absolute;
+      background: $branco;
+      border: 1px solid $cinza-border;
+      top: 38px;
+      left: 0;
+      display: none;
+      z-index: 9;
+
+      a {
+        width: 100%;
+        display: block;
+        font-size: 11px;
+        font-family: $text-font2;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 13px 0;
+        border-bottom: 1px solid $cinza-border;
+        transition: all linear 0.2s;
+
+        &:hover {
+          color: $branco;
+          background: $cinza-medio;
+          transition: all linear 0.2s;
+        }
+
+        &:last-child {
+          color: $vermelho;
+
+          &:hover {
+            color: $branco;
+            background: $vermelho;
+          }
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 25px;
+      background: $vermelho;
+      display: inline-block;
+      margin: 0 16px;
+    }
+  }
+
+  &-carrinho {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      // .maskCart {
+      //   &::before {
+      //     content: "";
+      //     width: 100%;
+      //     height: 100%;
+      //     position: fixed;
+      //     background: rgba(0, 0, 0, 0.6);
+      //     left: 0;
+      //     top: 0;
+      //     z-index: 1;
+      //   }
+      // }
+
+      .drawerMiniCart{
+        display: block;
+      }
+
+      .header-carrinho__text{
+        color: $branco;
+      }
+
+      .header-carrinho__icon{
+        &Cart{
+          &::after{
+            color: $branco;
+          }
+        }
+
+        &Qtd{
+          background: $preto;
+          color: $branco;
+        }
+      }
+    }
+
+    &__text {
+      max-width: 67px;
+      display: inline-block;
+      position: relative;
+      font-size: 14px;
+      font-family: $text-font2;
+      font-weight: 400;
+      z-index: 99;
+    }
+
+    &__icon {
+      position: relative;
+      z-index: 99;
+
+      &Cart {
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        
+        &::after{
+          content: '\e902';
+          display: block;
+          position: relative;
+          font-family: 'icomoon';
+          font-size: 25px;
+          color: $cinza-medio;
+          top: 3px;
+        }
+
+        &.active {
+          &::after{
+            color: $branco;
+          }
+        }
+      }
+
+      &Qtd {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        font-weight: 600;
+        font-family: $text-font2;
+        color: $branco;
+        background: $vermelho;
+        border-radius: 50%;
+        top: 0;
+        right: 0;
+
+        &.active {
+          color: $vermelho;
+          background: $branco;
+        }
+      }
+    }
+  }
+}
+
+.headerFixed{
+  margin-top: 213px;
+
+  > header {
+    width: 100%;
+    position: fixed;
+    background: #fff;
+    top: -100%;
+    left: 0;
+    z-index: 99;
+    transition: all linear 1s;
+    border-bottom: 1px solid $cinza-border;
+
+    .header{
+      .containerCenter{
+        height: auto;
+        padding: 8px 0;
+      }
+
+      &-departamentos{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-family: $text-font2;
+        font-weight: 700;
+        margin-left: 22px;
+        cursor: pointer;
+
+        &::before{
+          content: '\f0c9';
+          display: inline-block;
+          font-family: 'FontAwesome';
+          font-size: 18px;
+          margin-right: 9px;
+        }
+      }
+
+      &-busca{
+        width: calc(100% - 97px);
+      }
+
+      &-nossasLojas{
+        display: none;
+      }
+
+      &-saudacao{
+        &__text{
+          display: none;
+        }
+
+        &__drawer{
+          display: none!important;
+        }
+
+        &__icon{
+          cursor: pointer;
+        }
+
+        &::after{
+          background: transparent;
+        }
+      }
+
+      &-carrinho{
+        &__text{
+          display: none;
+        }
+      }
+    }
+
+    .menuDesktop{
+      display: none;
+    }
+  }
+}

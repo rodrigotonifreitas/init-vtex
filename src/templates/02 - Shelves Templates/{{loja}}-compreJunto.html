@@ -1,0 +1,16 @@
+#set($id = $product.Id)
+#set($idSku = $product.productVariantId)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
+
+<a class="prateleira__productImage" title="$escapedName" href="$uri">
+    <span class="js--lazyload has--lazyload" data-noscript="">
+        <noscript>$product.GetImageTag(2)</noscript>
+    </span>
+</a>
+
+<h3 class="prateleira__lead" data-id="$id" data-price="$product.BestPrice" data-idSku="$idSku">
+    <a class="prateleira__link" title="$escapedName" href="$uri">
+        $product.Name
+    </a>
+</h3>

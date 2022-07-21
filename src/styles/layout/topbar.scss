@@ -1,0 +1,158 @@
+.Topbar {
+  @media only screen and (min-width: 1000px) {
+    display: block;
+  }
+  display: none;
+  background: $cinza_escuro;
+  color: $branco;
+
+  .informativos {
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-leftList {
+      &__item {
+        display: inline-flex;
+        flex-wrap: nowrap;
+
+        p {
+          color: $branco;
+          font-family: $text_font2;
+          font-size: 13px;
+
+          b {
+            color: $branco;
+            font-family: $text_font2;
+          }
+        }
+
+        &::after {
+          content: "";
+          width: 1px;
+          height: 11px;
+          display: inline-block;
+          background: $branco;
+          margin: 0 15px;
+        }
+
+        &:last-child {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-rightList {
+      height: 100%;
+      display: inline-flex;
+      align-items: center;
+      background: $vermelho;
+      padding: 0 35px;
+
+      &__item {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+          display: inline-flex;
+          align-items: center;
+
+          color: $branco;
+          font-family: $text_font2;
+          font-size: 13px;
+
+          b {
+            color: $branco;
+            font-family: $text_font2;
+          }
+        }
+
+        &Icon {
+          width: 15px;
+          height: 15px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          background: $branco;
+          margin: 0 5px;
+          border-radius: 50%;
+
+          &::after{
+            display: block;
+            font-family: 'FontAwesome';
+            font-size: 12px;
+            color: $vermelho;
+          }
+        }
+
+        &:first-child {
+          &::after {
+            content: "";
+            width: 1px;
+            height: 11px;
+            display: inline-block;
+            background: $branco;
+            margin: 0 15px;
+          }
+
+          .informativos-rightList__itemIcon{
+            &::after{
+              content: '\f095';
+            }
+          }
+        }
+
+        //Insta
+        &:nth-of-type(2) {
+          .informativos-rightList__itemIcon{
+            &::after{
+              content: '\f232';
+            }
+          }
+        }
+
+        //Insta
+        &:nth-of-type(3) {
+          .informativos-rightList__itemIcon{
+            &::after{
+              content: '\f16d';
+            }
+          }
+        }
+
+        //Face
+        &:nth-of-type(4) {
+          .informativos-rightList__itemIcon{
+            &::after{
+              content: '\f09a ';
+            }
+          }
+        }
+
+        //Youtube
+        &:nth-of-type(5) {
+          .informativos-rightList__itemIcon{
+            &::after{
+              content: '\f16a ';
+            }
+          }
+        }
+
+        //LinkeIn
+        &:nth-of-type(6) {
+          .informativos-rightList__itemIcon{
+            &::after{
+              content: '\f0e1 ';
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

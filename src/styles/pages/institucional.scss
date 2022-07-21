@@ -1,0 +1,172 @@
+/* breadcrumb institucional */
+.breadcrumb {
+    &__container{
+        @include container-center($max-width: 1300px);
+        padding: 16px 0;
+    }
+    &__list {
+        display: flex;
+    }
+    &__item {
+        list-style: none;
+        &:after {
+            content: "/";
+            @include configura-fonte ($first-breadcrumb-color, $inst-font, 400, 16);
+            margin: 0 10px;
+        }
+    }
+    &__link{
+        @include configura-fonte ($text-color, $text-font, 400, 16);
+    }
+   
+    .breadcrumb__item--last{
+        .breadcrumb__link{
+            @include configura-fonte ($vermelho, $text-font, 400, 16);
+        }
+    }
+}
+
+/* breadcrumb [end] */
+
+
+
+/* institucional */
+//institucional = classe que deve ser colocada no body de todas as opções do institucional
+.institucional-content__title{
+    width: 100%;
+    height: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 400;
+    font-family: $title-font;
+    text-align: center;
+    background: $vermelho url('/arquivos/title-institucional.png') center center no-repeat;
+    color: $branco;
+    margin-bottom: 10px;
+}
+
+.institucional {
+    &-content{
+        width: 100%;
+        display: inline-block;
+        margin: 36px 0;
+
+        p{
+            width: 100%;
+            display: block;
+            font-size: 17px;
+            font-weight: 400;
+            margin: 15px 0 35px;
+        }
+
+        iframe{
+            width: 80%!important;
+            height: 525px!important;
+            display: block;
+            margin: 10px 10% 65px;
+        }
+
+        h3{
+            display: block;
+            font-size: 25px;
+            font-family: $title-font;
+            text-transform: uppercase;
+            color: $vermelho;
+        }
+
+        .division{
+            width: 100%;
+            height: 2px;
+            display: block;
+            background: $cinza-border;
+            margin-bottom: 35px;
+        }
+
+        h4{
+            font-size: 25px;
+        }
+
+        .simbol{
+            font-weight: 600;
+            color: $vermelho;
+            font-size: 18px;
+        }
+
+        a{
+            color: $vermelho;
+            text-decoration: underline;
+        }
+
+        //Fale conosco
+
+        .fale-conosco{
+            width: 100%;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #formFC{
+            width: 100%;
+            display: block;
+            margin: 10px 0;
+
+            .boxCampo{
+                label{
+                    width: 100%;
+                    display: block;
+                }
+
+                input{
+                    width: 100%;
+                    height: 40px;
+                    display: block;
+                    border: 1px solid $cinza-medio;
+                    margin-bottom: 15px;
+                    padding: 0 16px;
+                }
+
+                textarea{
+                    width: 100%;
+                    height: 100px;
+                    display: block;
+                    border: 1px solid $cinza-medio;
+                    margin-bottom: 15px;
+                    padding: 16px;
+                }
+            }
+
+            .enviarForm{
+                width: 100%;
+                display: block;
+                font-weight: 600;
+                text-align: center;
+                color: $branco;
+                background: $vermelho;
+                padding: 15px 0;
+                transition: all linear .3s;
+                cursor: pointer;
+                
+                &:hover{
+                    background: $vermelho-hover;
+                    transition: all linear .3s;
+                }
+            }
+        }
+    }
+}
+
+/* institucional [end] */
+
+@media screen and (max-width: 1000px) {
+    .institucional {
+        &-content{
+            padding: 0 16px;
+
+            iframe{
+                height: auto!important;
+            }
+        }
+    }
+}

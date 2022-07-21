@@ -1,0 +1,101 @@
+<article class="containerFull TopbarMobile">
+    <section class="containerCenter">
+        <vtex.cmc:informativo />
+    </section>
+</article>
+
+<article class="containerFull headerMobile">
+    <section class="containerCenter">
+        <button class="navMenuMobile">
+            <i class="navMenuMobile-icon"> </i>
+        </button>
+        
+
+        <nav class="headerMobile-logo">
+            <a href="/">
+                <vtex.cmc:amcLogo />
+            </a>
+        </nav>
+
+        <section class="headerMobile-account">
+            <a href="/_secure/account#/profile">
+                <span class="headerMobile-account__icon"> 
+
+                </span>
+            </a>
+        </section>
+        
+        <section class="headerMobile-carrinho">
+            <div class="headerMobile-carrinho__icon">  
+                <a href="/checkout/#/cart">
+                    <span class="headerMobile-carrinho__iconCart"></span>
+                    <span class="headerMobile-carrinho__iconQtd"></span>
+                </a>              
+            </div>
+        </section>
+    </section>
+    
+    <section class="headerMobile-busca">
+        <vtex.cmc:fullTextSearchBox />
+    </section>
+</article>
+
+<!-- Estrutura menu -->
+
+<nav class="containerFull menuMobile">
+    <div class="containerCenter">
+        <span class="menuMobile-close"> </span> 
+
+        <div class="menuMobile-saudacao">
+            <i class="menuMobile-saudacao__icon"></i>
+            <span class="menuMobile-saudacao__text">
+            </span>
+            <ul class="menuMobile-saudacao__drawer">
+                <li class="menuMobile-saudacao__item minhaConta">
+                    <a href="/account">Meus dados</a>
+                </li>
+                <li class="menuMobile-saudacao__item meusPedidos">
+                    <a href="/account/orders">Meus pedidos</a>
+                </li>
+
+                <li class="menuMobile-saudacao__item sair">
+                    <a href="/logout">Sair</a>
+                </li>
+            </ul>   
+        </div>
+        
+        <div class="menuMobile-carrinho">
+            <a href="/checkout/#/cart">
+                <i class="menuMobile-carrinho__icon"></i>
+                <p class="menuMobile-carrinho__text">Meu carrinho </p>
+            </a>
+        </div>
+        
+        <div class="menuMobile-busca">
+            <vtex.cmc:fullTextSearchBox />
+        </div>
+
+        <div class="menuMobile-nossaEmpresa">
+            <a href="/institucional/nossa-empresa">
+                <span class="menuMobile-nossaEmpresa__icon">
+                </span>
+                <p class="menuMobile-nossaEmpresa__text">
+                    Conheça nossa empresa
+                </p>
+            </a>
+        </div>
+
+        <nav class="menuMobile-menu">
+            <ul class="menuMobile-menuList">
+                <li class="menuMobile-menuList__item todos_departamentos">
+                    <a>
+                        <p class="menuMobile-menuList__itemText"> Mais Departamentos </p>
+                        <i class="menuMobile-menuList__itemArrow"></i>
+                    </a>
+                    <ul class="menuMobile-menuSub"></ul>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+</nav>

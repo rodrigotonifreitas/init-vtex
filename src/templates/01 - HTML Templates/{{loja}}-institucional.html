@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="pt-br">
+
+<head>
+
+    <vtex.cmc:seoHead />
+    <vtex:metaTags />
+    <vtex:template id="amc-styles" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+</head>
+
+<body>
+
+    <!-- Chamada do cabeçalho da loja -->
+
+    <header>
+        <vtex:template id="amc-header" />
+        <vtex:template id="amc-headerMobile" />
+    </header>
+
+    <main>
+
+        <section class="breadcrumb__container">
+            <div class="breadcrumb">
+                <ul class="breadcrumb__list">
+                    <li class="breadcrumb__item">
+                        <a class="breadcrumb__link" title="amc" href="/">Home</a>
+                    </li>
+                    <li class="breadcrumb__item--last">
+                        <vtex:contentPlaceHolder id="breadcrumb" />
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <article class="containerFull institucional">
+            <h1 class="institucional-content__title">
+                <vtex:contentPlaceHolder id="Title" />
+            </h1>
+            <section class="containerCenter ">
+                <div class="institucional-content">
+                    <div class="institucional-content__text">
+                        <vtex:contentPlaceHolder id="Texto" />
+                    </div>
+                </div>
+            </section>
+        </article>
+
+    </main>
+
+    <!-- Chamada para o rodapé -->
+
+    <vtex:template id="amc-footer" />
+
+    <!-- Chamada para os scripts Js da loja -->
+
+    <vtex:template id="amc-scripts" />
+
+</body>
+
+</html>
